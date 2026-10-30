@@ -4,102 +4,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的数学个人主页</title>
+
+  <title>Mathematical Notes</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      background: #f8f9fa;
-      color: #333;
-      line-height: 1.8;
       margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      color: #f5f5f5;
+      background-color: #101010;
+
+      /* 使用上传的数学壁纸 */
+      background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0.35),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url("background.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
 
-    header {
-      background: #263e59;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
+    /* 顶部导航栏 */
     nav {
-      background: #e9ecef;
-      text-align: center;
-      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(10, 10, 10, 0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
-    nav a {
-      color: #263e59;
-      margin: 0 15px;
+    .logo {
+      font-size: 19px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .links a {
+      color: white;
       text-decoration: none;
+      font-size: 15px;
     }
 
+    .links a:hover {
+      color: #a9c9ee;
+    }
+
+    /* 中央标题 */
+    header {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(34px, 6vw, 65px);
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #dddddd;
+    }
+
+    /* 主体内容 */
     main {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 950px;
+      margin: auto;
+      padding: 30px 20px 90px;
     }
 
     section {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 8px;
+      background: rgba(13, 17, 23, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 35px;
+      margin-bottom: 30px;
+      scroll-margin-top: 90px;
     }
 
-    h2 {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
+    section h2 {
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 12px;
+    }
+
+    section p {
+      line-height: 2;
+      color: #d6d6d6;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      color: #777;
+      padding: 30px;
+      background: rgba(0,0,0,0.5);
+      color: #aaaaaa;
+      font-size: 13px;
+    }
+
+    /* 手机屏幕适配 */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .links {
+        gap: 18px;
+      }
+
+      header {
+        min-height: 60vh;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      body {
+        background-attachment: scroll;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>我的数学个人主页</h1>
-    <p>Mathematics · Algebraic Geometry</p>
-  </header>
-
   <nav>
-    <a href="#about">关于</a>
-    <a href="#interests">研究兴趣</a>
-    <a href="#notes">数学讲义</a>
+    <div class="logo">Mathematical Notes</div>
+
+    <div class="links">
+      <a href="#about">关于</a>
+      <a href="#interests">研究兴趣</a>
+      <a href="#notes">数学讲义</a>
+    </div>
   </nav>
+
+  <header>
+    <h1>Mathematical Notes</h1>
+    <p>Algebra · Geometry · Mathematics</p>
+  </header>
 
   <main>
 
     <section id="about">
-      <h2>关于我</h2>
+      <h2>关于</h2>
       <p>
-        欢迎来到我的个人主页。
-        这里用于记录数学学习、研究和讲义整理。
+        欢迎来到我的数学个人主页。
+        这里用于记录数学学习、研究和个人笔记。
       </p>
     </section>
 
     <section id="interests">
       <h2>研究兴趣</h2>
       <p>
-        代数几何、双有理几何、交换代数、
-        同调代数等。
+        Algebraic Geometry · Birational Geometry
+      </p>
+      <p>
+        Commutative Algebra · Homological Algebra
       </p>
     </section>
 
     <section id="notes">
       <h2>数学讲义</h2>
-      <p>讲义内容将陆续更新。</p>
+      <p>
+        这里将用于整理和分享个人数学讲义。
+      </p>
+      <p>Coming soon...</p>
     </section>
 
   </main>
 
   <footer>
-    © 2026 我的数学个人主页
+    © 2026 Mathematical Notes
   </footer>
 
 </body>
