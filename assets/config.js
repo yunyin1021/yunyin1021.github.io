@@ -4,7 +4,7 @@ window.SITE_CONFIG = {
     "en": "HiddenCloud"
   },
   "showHomeTitle": false,
-  "avatar": "avatar.png",
+  "avatar": "assets/avatar.png",
   "socials": [
     {
       "name": {
