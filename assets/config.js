@@ -1,7 +1,7 @@
 window.SITE_CONFIG = {
   "name": {
     "zh": "雲隐",
-    "en": "Yunyin"
+    "en": "HiddenCloud"
   },
   "showHomeTitle": false,
   "avatar": "avatar.png",
