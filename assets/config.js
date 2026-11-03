@@ -4,7 +4,7 @@ window.SITE_CONFIG = {
     "en": "Yunyin"
   },
   "showHomeTitle": false,
-  "avatar": "",
+  "avatar": "avatar.png",
   "socials": [
     {
       "name": {
