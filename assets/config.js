@@ -59,7 +59,19 @@ window.SITE_CONFIG = {
   ],
   "notes": [],
   "bookmarks": [],
-  "workshop": [],
+  "workshop": [
+  {
+    "title": {
+      "zh": "在线绘图编辑器",
+      "en": "Online Diagram Editor"
+    },
+    "description": {
+      "zh": "在浏览器中使用的数学绘图工具。",
+      "en": "A browser-based tool for mathematical diagrams."
+    },
+    "url": "tikz/index.html"
+  }
+  ],
   "mottos": [
     {
       "text": {
